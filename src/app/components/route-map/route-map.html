@@ -1,0 +1,13 @@
+<div class="col-xs-12 col-sm-6">
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <div *ngIf="mapObj?.isVisible">
+        <agm-map style="height: 300px; width: 300px;">
+          <google-map-directions [origin]="{ longitude: mapObj.route.fromLng, latitude: mapObj.route.fromLat }"
+                                 [destination]="{ longitude: mapObj.route.toLng, latitude: mapObj.route.toLat }"
+          ></google-map-directions>
+        </agm-map>
+      </div>
+    </div>
+  </div>
+</div>

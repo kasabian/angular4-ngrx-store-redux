@@ -1,0 +1,25 @@
+<div>
+  <div class="row" (click)="showMap(route)">
+    <div class="col-xs-4 col-sm-4">
+      <b>{{ route.fromLat }}</b>
+    </div>
+    <div class="col-xs-4 col-sm-4"></div>
+    <div class="col-xs-4 col-sm-4">
+      <b>{{ route.toLat }}</b>
+    </div>
+    <div class="col-xs-4 col-sm-4">
+      <b>{{ route.fromLng }}</b>
+    </div>
+    <div class="col-xs-4 col-sm-4"></div>
+    <div class="col-xs-4 col-sm-4">
+      <b>{{ route.toLng }}</b>
+    </div>
+
+    <div class="col-xs-8 col-sm-8 pt-10">
+      Date: {{ route.date | date: 'dd MMMM y' }}
+    </div>
+    <div class="col-xs-4 col-sm-4 pt-10">
+      <a (click)="editRoute(route)">Edit</a> <a (click)="removeRoute(route.id)">Delete</a>
+    </div>
+  </div>
+</div>

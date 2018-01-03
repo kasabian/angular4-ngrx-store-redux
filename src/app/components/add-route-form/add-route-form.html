@@ -1,0 +1,78 @@
+<div class="row mb-10">
+  <div class="col-xs-12 col-sm-12 text-center">
+    <div class="panel panel-default">
+      <form [formGroup]="form">
+        <div class="panel-body">
+          <div class="col-xs-12 col-sm-12 text-center">
+            <h2>Add Route</h2>
+          </div>
+          <div class="col-xs-12 col-sm-6">
+            <div class="col-xs-2 col-sm-2 text-center pt-30">
+              From
+            </div>
+            <div class="col-xs-8 col-sm-8">
+              <div class="col-xs-12 col-sm-12">
+                <div class="form-group">
+                  <input class="form-control"
+                         placeholder="Lat"
+                         formControlName="fromLat"
+                  >
+                </div>
+              </div>
+              <div class="col-xs-12 col-sm-12">
+                <div class="form-group">
+                  <input class="form-control"
+                         placeholder="Lng"
+                         formControlName="fromLng"
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xs-12 col-sm-6">
+            <div class="col-xs-2 col-sm-2 text-center pt-30">
+              To
+            </div>
+            <div class="col-xs-8 col-sm-8">
+              <div class="col-xs-12 col-sm-12">
+                <div class="form-group">
+                  <input class="form-control"
+                         placeholder="Lat"
+                         formControlName="toLat"
+                  >
+                </div>
+              </div>
+              <div class="col-xs-12 col-sm-12">
+                <div class="form-group">
+                  <input class="form-control"
+                         placeholder="Lng"
+                         formControlName="toLng"
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xs-12 col-sm-12 text-center">
+            <button type="button"
+                    class="btn btn-success btn-lg"
+                    (click)="addNewRoute()"
+                    *ngIf="!isEditing"
+            >
+              Push
+            </button>
+
+            <button type="button"
+                    class="btn btn-success btn-lg"
+                    (click)="updateRoute()"
+                    *ngIf="isEditing"
+            >
+              Update
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
